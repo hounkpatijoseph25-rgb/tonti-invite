@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F3D2E" />
+    <title>Invitation — Tonti</title>
+    <meta name="description" content="Rejoignez une tontine sur Tonti." />
+    <style>
+      :root {
+        --cream: #f6f1e7;
+        --paper: #fffdf8;
+        --ink: #12211b;
+        --body: #414b46;
+        --muted: #6d7a73;
+        --green: #0f3d2e;
+        --primary: #0f6b45;
+        --green-soft: #e6efe9;
+        --gold: #f0c048;
+        --border: #e3dccd;
+        --danger: #a4341f;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--body);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+          Arial, sans-serif;
+        line-height: 1.6;
+        font-size: 16px;
+        min-height: 100vh;
+      }
+      .wrap {
+        max-width: 560px;
+        margin: 0 auto;
+        padding: 26px 20px 56px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 26px;
+      }
+      .mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        background: var(--green);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font-weight: 800;
+        font-size: 22px;
+        flex: 0 0 auto;
+      }
+      .brand {
+        font-weight: 800;
+        font-size: 18px;
+        color: var(--ink);
+        text-decoration: none;
+        letter-spacing: -0.2px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 24px;
+        box-shadow: 0 14px 36px rgba(18, 33, 27, 0.07);
+      }
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: var(--primary);
+        margin: 0 0 8px;
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: -0.6px;
+        color: var(--ink);
+        margin: 0 0 8px;
+        word-break: break-word;
+      }
+      .sub {
+        margin: 0 0 20px;
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .facts {
+        display: grid;
+        gap: 0;
+        margin: 0 0 22px;
+        border-top: 1px solid var(--border);
+      }
+      .fact {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 15px;
+      }
+      .fact dt {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .fact dd {
+        margin: 0;
+        color: var(--ink);
+        font-weight: 700;
+        text-align: right;
+      }
+      .mono {
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+        letter-spacing: 1px;
+        font-size: 14px;
+        color: var(--green);
+      }
+      .actions {
+        display: grid;
+        gap: 10px;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 14px 18px;
+        border-radius: 14px;
+        background: var(--primary);
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .btn.secondary {
+        background: var(--paper);
+        color: var(--green);
+        border-color: var(--border);
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--muted);
+        border-color: transparent;
+        min-height: 44px;
+        font-size: 14px;
+      }
+      .btn:active {
+        opacity: 0.88;
+      }
+      .hint {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        font-size: 13px;
+        color: var(--muted);
+        margin: 14px 0 0;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--gold);
+        margin-top: 8px;
+        flex: 0 0 auto;
+      }
+      .state {
+        text-align: center;
+        padding: 22px 8px;
+      }
+      .state h2 {
+        color: var(--ink);
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      .state p {
+        margin: 0 0 18px;
+        font-size: 15px;
+      }
+      .state.error h2 {
+        color: var(--danger);
+      }
+      [hidden] {
+        display: none !important;
+      }
+      footer {
+        margin-top: 26px;
+        font-size: 13px;
+        color: var(--muted);
+        text-align: center;
+      }
+      footer a {
+        color: var(--green);
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark">T</div>
+        <a class="brand" href="../">Tonti</a>
+      </header>
+
+      <main>
+        <div id="loading" class="card state">
+          <h2>Ouverture de l’invitation…</h2>
+          <p>Nous lisons les informations du groupe.</p>
+        </div>
+
+        <div id="invalid" class="card state error" hidden>
+          <h2>Lien incomplet</h2>
+          <p>
+            Ce lien d’invitation ne contient pas les informations du groupe. Demandez au gérant de
+            vous le renvoyer, ou saisissez son code dans l’application.
+          </p>
+          <a class="btn secondary" href="../">Retour à l’accueil</a>
+        </div>
+
+        <div id="invite" class="card" hidden>
+          <p class="eyebrow">Invitation à une tontine</p>
+          <h1 id="name">—</h1>
+          <p class="sub" id="owner">—</p>
+
+          <dl class="facts">
+            <div class="fact"><dt>Cotisation</dt><dd id="amount">—</dd></div>
+            <div class="fact"><dt>Rythme</dt><dd id="frequency">—</dd></div>
+            <div class="fact"><dt>Membres</dt><dd id="members">—</dd></div>
+            <div class="fact"><dt>Type</dt><dd id="kind">—</dd></div>
+            <div class="fact">
+              <dt>Code</dt><dd class="mono" id="code">—</dd>
+            </div>
+          </dl>
+
+          <div class="actions">
+            <a class="btn" id="open" href="#">Ouvrir dans Tonti</a>
+            <a
+              class="btn secondary"
+              href="https://github.com/hounkpatijoseph25-rgb/tonti-invite/releases/latest/download/Tonti-1.0.0.apk"
+              >Télécharger Tonti</a
+            >
+            <button class="btn ghost" id="copy" type="button">Copier le lien</button>
+          </div>
+
+          <p class="hint">
+            <span class="dot"></span>
+            <span
+              >Si l’application n’est pas encore installée, téléchargez-la puis rouvrez cette page
+              pour rejoindre le groupe.</span
+            >
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        Tonti — Bénin · <a href="../confidentialite/">Confidentialité</a>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var raw = params.get('d') || '';
+        var codeParam = (params.get('code') || '').trim().toUpperCase();
+
+        function show(id) {
+          ['loading', 'invalid', 'invite'].forEach(function (key) {
+            var el = document.getElementById(key);
+            if (el) el.hidden = key !== id;
+          });
+        }
+
+        function decodePayload(payload) {
+          if (!payload || payload.length > 2000) return null;
+          var clean = payload.replace(/[^A-Za-z0-9\-_]/g, '');
+          if (!clean || clean.length % 4 === 1) return null;
+          var padded = clean.replace(/-/g, '+').replace(/_/g, '/');
+          while (padded.length % 4 !== 0) padded += '=';
+          var binary = atob(padded);
+          var bytes = new Uint8Array(binary.length);
+          for (var i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+          var json = new TextDecoder('utf-8').decode(bytes);
+          var packed = JSON.parse(json);
+          if (!packed || packed.v !== 1) return null;
+          if (typeof packed.c !== 'string' || !packed.c.trim()) return null;
+          if (typeof packed.n !== 'string' || !packed.n.trim()) return null;
+          if (typeof packed.a !== 'number' || !isFinite(packed.a) || packed.a <= 0) return null;
+          return packed;
+        }
+
+        var frequencies = {
+          weekly: 'Chaque semaine',
+          biweekly: 'Toutes les 2 semaines',
+          monthly: 'Chaque mois',
+        };
+        var kinds = { rotating: 'Rotative', collective: 'Collective' };
+
+        function formatAmount(value) {
+          try {
+            return (
+              new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 }).format(value) + ' FCFA'
+            );
+          } catch (error) {
+            return String(value) + ' FCFA';
+          }
+        }
+
+        var packed = null;
+        try {
+          packed = decodePayload(raw);
+        } catch (error) {
+          packed = null;
+        }
+
+        if (!packed) {
+          if (codeParam) {
+            document.getElementById('name').textContent = 'Invitation Tonti';
+            document.getElementById('owner').textContent =
+              'Les détails ne sont pas inclus dans ce lien.';
+            document.getElementById('amount').textContent = '—';
+            document.getElementById('frequency').textContent = '—';
+            document.getElementById('members').textContent = '—';
+            document.getElementById('kind').textContent = '—';
+            document.getElementById('code').textContent = codeParam;
+            document.getElementById('open').href =
+              'tonti://join/' + encodeURIComponent(codeParam);
+            show('invite');
+            bindCopy();
+            return;
+          }
+          show('invalid');
+          return;
+        }
+
+        var code = String(packed.c).trim().toUpperCase();
+        document.getElementById('name').textContent = String(packed.n).trim();
+        document.getElementById('owner').textContent = packed.on
+          ? 'Invitation de ' + packed.on
+          : 'Invitation reçue';
+        document.getElementById('amount').textContent = formatAmount(packed.a);
+        document.getElementById('frequency').textContent =
+          frequencies[packed.f] || 'Rythme inconnu';
+        document.getElementById('members').textContent =
+          (packed.m || (packed.mn ? packed.mn.length : 1)) + ' personnes';
+        document.getElementById('kind').textContent = kinds[packed.k] || 'Tontine';
+        document.getElementById('code').textContent = code;
+        document.getElementById('open').href =
+          'tonti://join/' + encodeURIComponent(code) + '?d=' + encodeURIComponent(raw);
+        show('invite');
+        bindCopy();
+
+        function bindCopy() {
+          var button = document.getElementById('copy');
+          button.addEventListener('click', function () {
+            var url = window.location.href;
+            function done() {
+              button.textContent = 'Lien copié';
+              setTimeout(function () {
+                button.textContent = 'Copier le lien';
+              }, 2000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(url).then(done, function () {});
+              return;
+            }
+            var area = document.createElement('textarea');
+            area.value = url;
+            document.body.appendChild(area);
+            area.select();
+            try {
+              document.execCommand('copy');
+              done();
+            } catch (error) {}
+            document.body.removeChild(area);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

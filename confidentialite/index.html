@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confidentialité — Tonti</title>
+    <meta
+      name="description"
+      content="Règles de confidentialité de Tonti, l'application de gestion de tontines."
+    />
+    <style>
+      :root {
+        --cream: #f6f1e7;
+        --paper: #fffdf8;
+        --ink: #12211b;
+        --body: #414b46;
+        --muted: #6d7a73;
+        --green: #0f3d2e;
+        --green-soft: #e6efe9;
+        --gold: #f0c048;
+        --border: #e3dccd;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--body);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+          Arial, sans-serif;
+        line-height: 1.65;
+        font-size: 16px;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 20px 72px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+      .mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: var(--green);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font-weight: 800;
+        font-size: 24px;
+        flex: 0 0 auto;
+      }
+      .brand {
+        font-weight: 800;
+        font-size: 20px;
+        color: var(--ink);
+        letter-spacing: -0.2px;
+      }
+      .tag {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      h1 {
+        color: var(--ink);
+        font-size: clamp(28px, 6vw, 38px);
+        line-height: 1.15;
+        letter-spacing: -0.6px;
+        margin: 0 0 10px;
+      }
+      .lead {
+        font-size: 16px;
+        color: var(--body);
+        margin: 0 0 6px;
+      }
+      .version {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 22px 20px;
+        margin-bottom: 16px;
+      }
+      .card h2 {
+        color: var(--ink);
+        font-size: 17px;
+        margin: 0 0 10px;
+        letter-spacing: -0.2px;
+      }
+      .card p {
+        margin: 0 0 10px;
+        font-size: 15px;
+      }
+      .card p:last-child {
+        margin-bottom: 0;
+      }
+      .note {
+        background: var(--green-soft);
+        border-color: #cfe0d5;
+      }
+      .note p {
+        color: #10402f;
+      }
+      a {
+        color: var(--green);
+        font-weight: 600;
+      }
+      footer {
+        margin-top: 32px;
+        font-size: 13px;
+        color: var(--muted);
+        text-align: center;
+      }
+      footer a {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark">T</div>
+        <div>
+          <div class="brand">Tonti</div>
+          <div class="tag">Votre tontine, en toute confiance.</div>
+        </div>
+      </header>
+
+      <h1>Règles de confidentialité</h1>
+      <p class="lead">
+        Avant d’utiliser Tonti, lisez et acceptez nos règles de confidentialité. Sans votre accord,
+        l’application ne peut pas être utilisée.
+      </p>
+      <p class="version">Version en vigueur : 2026-10-26</p>
+
+      <section class="card">
+        <h2>1. Qui sommes-nous</h2>
+        <p>
+          Tonti est une application de gestion de tontines destinée aux communautés d’Afrique de
+          l’Ouest. Elle permet d’organiser les cotisations, de suivre les tours et d’informer chaque
+          membre en temps réel.
+        </p>
+        <p>
+          Pour toute question relative à vos données, écrivez à
+          <a href="mailto:support@tonti.app">support@tonti.app</a>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Données que nous collectons</h2>
+        <p>Identité : votre nom, votre pays et votre numéro de téléphone mobile.</p>
+        <p>
+          Sécurité : un code PIN à 6 chiffres, conservé uniquement sous forme d’empreinte
+          cryptographique (SHA-256 avec sel aléatoire). Le code lui-même n’est jamais stocké.
+        </p>
+        <p>
+          Activité : les tontines que vous créez ou rejoignez, les cotisations enregistrées, les
+          références de transaction Mobile Money et les notifications.
+        </p>
+        <p>
+          Photo de profil : uniquement si vous choisissez d’en ajouter une. Elle reste sur votre
+          appareil et n’est jamais transmise.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>3. Pourquoi nous les utilisons</h2>
+        <p>Faire fonctionner votre compte et vous identifier à chaque ouverture de l’application.</p>
+        <p>Afficher l’état de vos tontines, les échéances et l’historique des paiements.</p>
+        <p>Vous permettre d’inviter des membres et de rejoindre une tontine avec un lien.</p>
+        <p>Vous envoyer des rappels de cotisation dans l’application.</p>
+      </section>
+
+      <section class="card">
+        <h2>4. Où sont stockées vos données</h2>
+        <p>
+          Vos données sont d’abord enregistrées sur votre téléphone, dans l’espace privé de
+          l’application.
+        </p>
+        <p>
+          Lorsque le partage entre membres est activé, les informations nécessaires à la tontine
+          (nom, montant, membres, échéances) sont synchronisées avec notre serveur sécurisé afin que
+          chaque membre voie les mêmes informations.
+        </p>
+        <p>Aucune donnée n’est vendue, louée ou transmise à des annonceurs.</p>
+      </section>
+
+      <section class="card">
+        <h2>5. Paiements Mobile Money</h2>
+        <p>
+          Les paiements sont effectués directement auprès de votre opérateur (MTN Mobile Money, Moov
+          Money, Wave, Celtiis Cash). Tonti ne conserve jamais vos identifiants Mobile Money ni
+          votre code secret opérateur.
+        </p>
+        <p>
+          Seule la référence de la transaction que vous saisissez est enregistrée, afin de justifier
+          votre cotisation auprès du gérant.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>6. Partage avec les autres membres</h2>
+        <p>
+          Les membres d’une même tontine voient votre nom, votre numéro de téléphone, votre rôle et
+          l’état de vos cotisations.
+        </p>
+        <p>
+          Votre code PIN, votre photo de profil et vos références de transaction ne sont jamais
+          visibles par les autres membres.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>7. Durée de conservation</h2>
+        <p>
+          Vos données restent conservées tant que votre compte existe dans l’application.
+        </p>
+        <p>
+          La réinitialisation depuis le Profil efface définitivement le profil, les tontines et
+          l’historique enregistrés sur l’appareil.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>8. Vos droits</h2>
+        <p>
+          Vous pouvez à tout moment consulter et modifier votre nom, votre pays et votre téléphone
+          depuis le Profil.
+        </p>
+        <p>
+          Vous pouvez supprimer votre photo de profil, retirer un membre d’une tontine que vous
+          administrez, ou effacer l’intégralité de vos données avec « Réinitialiser l’application ».
+        </p>
+        <p>
+          Pour exercer un droit d’accès, de rectification ou d’effacement sur les données
+          synchronisées, contactez <a href="mailto:support@tonti.app">support@tonti.app</a>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>9. Sécurité</h2>
+        <p>
+          Le code PIN est exigé à chaque réouverture de l’application et après un passage en
+          arrière-plan prolongé.
+        </p>
+        <p>
+          Les échanges avec le serveur sont chiffrés (HTTPS). L’accès aux données d’une tontine est
+          restreint à ses membres.
+        </p>
+        <p>
+          Aucune méthode n’est infaillible : protégez votre téléphone par un verrouillage système et
+          ne partagez jamais votre code PIN.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>10. Mineurs</h2>
+        <p>
+          Tonti est destiné aux personnes majeures capables de gérer leurs engagements financiers.
+          L’application n’est pas conçue pour les moins de 18 ans.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>11. Modifications</h2>
+        <p>
+          Cette politique peut évoluer. En cas de changement important, une nouvelle acceptation
+          vous sera demandée au prochain lancement.
+        </p>
+        <p>Version en vigueur : 2026-10-26.</p>
+      </section>
+
+      <section class="card note">
+        <p>
+          En utilisant Tonti, vous confirmez avoir lu et accepté ces règles. Vous pouvez retirer
+          votre accord à tout moment en réinitialisant l’application depuis votre profil.
+        </p>
+      </section>
+
+      <footer>
+        Tonti — Bénin · <a href="mailto:support@tonti.app">support@tonti.app</a>
+      </footer>
+    </div>
+  </body>
+</html>

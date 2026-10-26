@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F3D2E" />
+    <title>Tonti — La tontine, simplement</title>
+    <meta
+      name="description"
+      content="Tonti réunit votre groupe de tontine, suit les cotisations et règle par Mobile Money. Application Android, en français, montants en FCFA."
+    />
+    <style>
+      :root {
+        --cream: #f6f1e7;
+        --paper: #fffdf8;
+        --ink: #12211b;
+        --body: #414b46;
+        --muted: #6d7a73;
+        --green: #0f3d2e;
+        --primary: #0f6b45;
+        --green-soft: #e6efe9;
+        --gold: #f0c048;
+        --border: #e3dccd;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--body);
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+          Arial, sans-serif;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 28px 20px 64px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 36px;
+      }
+      .mark {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+        background: var(--green);
+        display: grid;
+        place-items: center;
+        color: var(--gold);
+        font-weight: 800;
+        font-size: 26px;
+        flex: 0 0 auto;
+      }
+      .brand {
+        font-weight: 800;
+        font-size: 21px;
+        color: var(--ink);
+        letter-spacing: -0.3px;
+      }
+      .brand small {
+        display: block;
+        font-weight: 500;
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0;
+      }
+      h1 {
+        font-size: 34px;
+        line-height: 1.15;
+        letter-spacing: -1px;
+        color: var(--ink);
+        margin: 0 0 14px;
+      }
+      .lead {
+        font-size: 17px;
+        margin: 0 0 26px;
+        max-width: 34ch;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 22px;
+        margin-bottom: 18px;
+        box-shadow: 0 10px 30px rgba(18, 33, 27, 0.05);
+      }
+      .card h2 {
+        margin: 0 0 6px;
+        font-size: 18px;
+        color: var(--ink);
+        letter-spacing: -0.2px;
+      }
+      .card p {
+        margin: 0 0 16px;
+        font-size: 15px;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 54px;
+        padding: 14px 20px;
+        border-radius: 14px;
+        background: var(--primary);
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid transparent;
+        text-align: center;
+      }
+      .btn:active {
+        opacity: 0.88;
+      }
+      .btn.secondary {
+        background: var(--paper);
+        color: var(--green);
+        border-color: var(--border);
+      }
+      .note {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        font-size: 13px;
+        color: var(--muted);
+        margin: 12px 0 0;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--gold);
+        margin-top: 8px;
+        flex: 0 0 auto;
+      }
+      ul.features {
+        list-style: none;
+        margin: 4px 0 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+      }
+      ul.features li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px;
+      }
+      .tick {
+        width: 26px;
+        height: 26px;
+        border-radius: 9px;
+        background: var(--green-soft);
+        color: var(--primary);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 13px;
+        flex: 0 0 auto;
+      }
+      ul.features strong {
+        display: block;
+        color: var(--ink);
+        font-size: 15px;
+      }
+      ul.features span {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .code {
+        font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+        font-size: 13px;
+        color: var(--green);
+        background: var(--green-soft);
+        border-radius: 8px;
+        padding: 2px 6px;
+      }
+      footer {
+        margin-top: 34px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        justify-content: space-between;
+      }
+      footer a {
+        color: var(--green);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      @media (min-width: 640px) {
+        h1 {
+          font-size: 42px;
+        }
+        .wrap {
+          padding: 44px 24px 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark">T</div>
+        <div class="brand">Tonti<small>La tontine, simplement</small></div>
+      </header>
+
+      <main>
+        <h1>Votre tontine, suivie au franc près.</h1>
+        <p class="lead">
+          Tonti réunit votre groupe, enregistre chaque cotisation et rappelle les échéances.
+          Les paiements passent par Mobile Money, les comptes restent lisibles.
+        </p>
+
+        <section class="card">
+          <h2>Télécharger l’application</h2>
+          <p>Android · version 1.0.0 · installation directe, sans magasin d’applications.</p>
+          <a
+            class="btn"
+            href="https://github.com/hounkpatijoseph25-rgb/tonti-invite/releases/latest/download/Tonti-1.0.0.apk"
+          >
+            Télécharger Tonti (APK)
+          </a>
+          <p class="note">
+            <span class="dot"></span>
+            <span
+              >Au premier lancement, autorisez l’installation depuis votre navigateur ou votre
+              gestionnaire de fichiers.</span
+            >
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Vous avez reçu un lien d’invitation ?</h2>
+          <p>
+            Ouvrez le lien reçu sur WhatsApp ou par SMS. La page affiche la tontine, son gérant et
+            le montant de la cotisation, puis propose d’ouvrir Tonti pour rejoindre le groupe.
+          </p>
+          <p class="note">
+            <span class="dot"></span>
+            <span
+              >Le lien contient déjà les informations du groupe. Aucun compte à créer côté
+              serveur, aucune donnée bancaire demandée.</span
+            >
+          </p>
+        </section>
+
+        <ul class="features">
+          <li>
+            <span class="tick">1</span>
+            <span
+              ><strong>Chaque cotisation enregistrée</strong
+              ><span>Montant, date, moyen de paiement et référence de la transaction.</span></span
+            >
+          </li>
+          <li>
+            <span class="tick">2</span>
+            <span
+              ><strong>Mobile Money</strong
+              ><span>MTN MoMo, Moov Money, Wave et Celtiis Cash, en FCFA.</span></span
+            >
+          </li>
+          <li>
+            <span class="tick">3</span>
+            <span
+              ><strong>Invitations par WhatsApp</strong
+              ><span>Un lien lisible, un code à 6 caractères, un groupe prêt en une minute.</span></span
+            >
+          </li>
+        </ul>
+
+        <section class="card" style="margin-top: 18px">
+          <h2>Tontines rotatives et collectives</h2>
+          <p>
+            Choisissez le tour de chacun ou tirez l’ordre au sort. Pour un mariage, des funérailles
+            ou un projet, la cagnotte collective finance l’événement au lieu d’être reversée à un
+            seul membre.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <span>Tonti — Bénin</span>
+        <span>
+          <a href="./confidentialite/">Confidentialité</a> ·
+          <a href="mailto:support@tonti.app">support@tonti.app</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
